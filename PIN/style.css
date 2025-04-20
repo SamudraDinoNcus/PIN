@@ -1,0 +1,47 @@
+.carousel-inner{
+    margin-top: 50px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-inner .carousel-item img{
+    object-position: 0 -100px;
+}
+.carousel-inner h3{
+    font-size: 70px;
+}
+.row .card-body img{
+    width: 350px;
+}
+.row .card-body .btn{
+    transition: all 0.5s ease;
+    margin-top: 1px;
+    font-weight: 600;
+    background: #24262b;
+    color: white;
+}
+.row .card-body .btn:hover{
+    background-color: transparent;
+    color: #24262b;
+    border: 1px solid #24262b;
+    transform: scale(1.1);
+}
+.row {
+    margin: auto;
+}
+.row .section-header p{
+    border-bottom: 1px solid #24262b;
+    padding-bottom: 10px;
+}
+.container-footer{
+    width: 100%;
+    margin-top: 50px;
+}
+.carousel-inner .carousel-caption{
+    text-shadow: 2px 2px black;
+}
+.carousel-inner .carousel-caption h1{
+    text-align: right;
+    margin-bottom: 40%;
+    font-size: 80px;
+}
