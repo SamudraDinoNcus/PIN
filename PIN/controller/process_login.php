@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require '../model/db.php';
 
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -16,16 +16,16 @@ if ($result->num_rows === 1) {
 
     if (password_verify($password, $user['password'])) {
         if ($user['status'] == 'aktif') {
-            $_SESSION['username'] = $user['username'];
             $_SESSION['nama_pengguna'] = $user['nama_pengguna'];
-            header('Location: dashboard.php');
+            $_SESSION['login'] = true;
+            header('Location: ../view/dashboard.php');
             exit();
         } else {
-            header('Location: login.php?error=nonaktif');
+            header('Location: ../view/login.php?error=nonaktif');
             exit();
         }
     }
 }
 
-header('Location: login.php?error=1');
+header('Location: ../view/login.php?error=1');
 exit();

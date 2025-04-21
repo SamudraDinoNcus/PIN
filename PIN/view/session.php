@@ -2,7 +2,7 @@
 session_start();
 
 // Cek apakah user sudah login
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['login'])) {
     // Jika belum login, arahkan ke login.php
     header('Location: login.php');
     exit();
@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
     <?php $username = $_SESSION['nama_pengguna']; ?>
     <h1>Selamat Datang <?php echo "$username" ?> di halaman utama</h1>
 
-    <a href="logout.php">
+    <a href="../controller/logout.php">
         <button>Logout</button>
     </a>
 </body>

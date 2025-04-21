@@ -1,4 +1,4 @@
 <?php
 // Arahkan otomatis ke halaman login
-header('Location: login.php');
+header('Location: view/login.php');
 exit();

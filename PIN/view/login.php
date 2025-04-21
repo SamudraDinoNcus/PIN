@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php session_start();
+
+// Cek apakah user sudah login
+if (isset($_SESSION['login'])) {
+    // Jika belum login, arahkan ke login.php
+    header('Location: dashboard.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +73,7 @@
     <div class="row">
       <div class="col-4">
         <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-          <form method="POST" action="process_login.php">
+          <form method="POST" action="../controller/process_login.php">
             <!-- Update this action -->
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
@@ -93,7 +102,7 @@
           <div class="row g-0">
             <div class="col-md-4">
               <img
-                src="foto3.jpg"
+                src="../assets/foto3.jpg"
                 class="img-fluid rounded-start"
                 alt="..." />
             </div>
