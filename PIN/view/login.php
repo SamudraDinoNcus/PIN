@@ -2,9 +2,9 @@
 
 // Cek apakah user sudah login
 if (isset($_SESSION['login'])) {
-    // Jika belum login, arahkan ke login.php
-    header('Location: dashboard.php');
-    exit();
+  // Jika belum login, arahkan ke login.php
+  header('Location: dashboard.php');
+  exit();
 }
 ?>
 
@@ -15,6 +15,8 @@ if (isset($_SESSION['login'])) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bootstrap demo</title>
+  <style>
+  </style>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -23,39 +25,7 @@ if (isset($_SESSION['login'])) {
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="javascript:void(0)">DAIZY</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Contact</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" placeholder="Search" />
-          <button class="btn btn-primary" type="button">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
+  <?php include"../layouts/navbar.php"; ?>
   <div class="container">
     <br /><br /><br /><br />
     <h2 class="ms-5">Login Customer</h2>
@@ -93,7 +63,7 @@ if (isset($_SESSION['login'])) {
                 name="password"
                 required />
             </div>
-              <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </form>
         </div>
       </div>
