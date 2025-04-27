@@ -13,58 +13,37 @@ if (!isset($_SESSION['login'])) {
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bluestrap</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/style.css">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+  <!-- Theme Config Js -->
+  <script src="../assets/js/config.js"></script>
+
+  <!-- App css -->
+  <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+
+  <!-- Icons css -->
+  <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <!-- code nav -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="javascript:void(0)">DAIZY</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="session.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Contact</a>
-          </li>
-        </ul>
-        <form class="d-flex" method="POST" action="../controller/logout.php">
-          <input class="form-control me-2" type="text" placeholder="Search" />
-          <button class="btn btn-primary me-2" type="button">Search</button>
-          <button class="btn btn-warning" type="submit">logout</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
+  <?php
+  include "../layouts/navbar.php"
+  ?>
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators/dots -->
